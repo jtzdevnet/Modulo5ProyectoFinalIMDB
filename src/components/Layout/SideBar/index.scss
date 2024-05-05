@@ -1,0 +1,151 @@
+.side-bar{
+    transition: .3s ease left;
+    width: 240px;
+    border-right: solid 1px lighten(#000, 15%);
+    position: fixed;
+    top: 0;
+    left: -240px;
+    z-index: 2;
+    min-height: 100vh;
+    background: #000000bd;
+    backdrop-filter: blur(7px);
+    @media(min-width:1200px){
+        padding-top: 50px;
+        position: static;
+        width: 300px;
+        min-height: 80vh;
+        background: var(--black);
+    }
+    
+    &.active{
+        left: 0;
+    }
+
+    .sidebar-opener{
+        position: absolute;
+        right: -31px;
+        width: 30px;
+        line-height: 60px;
+        color: var(--white);
+        font-size: 20px;
+        text-align: center;
+        background: var(--primary);
+        backdrop-filter: blur(7px);
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        @media(min-width:1200px){
+            display: none;
+        }
+        svg{
+            pointer-events: none;
+        }
+        &:before{
+            content:"";
+            position: absolute;
+            top: -29px;
+            left:0;
+            width: 0;
+            height: 0;
+            border-bottom: 30px solid var(--primary);
+            border-right: 30px solid transparent;
+        }
+        &:after {
+            content:"";
+            position: absolute;
+            bottom: -29px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-top: 30px solid var(--primary);
+            border-right: 30px solid transparent;
+        }
+    }
+
+    .header-logo {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100px;
+        width: 240px;
+        border-right: solid 1px lighten(#000, 15%);
+        margin-bottom: 50px;
+        @media(min-width:1200px) {
+            display: none;
+        }
+
+        a {
+            display: inline-block;
+            padding: 20px;
+            height: 100%;
+
+            img {
+                display: block;
+                height: 100%;
+                @media(min-width:768px){
+                    max-width: 160px;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .menu-list{
+        margin-bottom: 50px;
+        h5{
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 12px;
+            padding-left: 20px;
+        }
+        .sidebar-link-list{
+            display: flex;
+            flex-flow: column wrap;
+            list-style: none;
+            li{
+                a{
+                    transition: .3s ease border-left;
+                    display: block;
+                    color: var(--inactive);
+                    letter-spacing: 0.1em;
+                    line-height: 55px;
+                    padding-left: 20px;
+                    font-size: 14px;
+                    position: relative;
+                    border-left: solid 5px transparent;
+                    span{
+                        transition: .3s ease color;
+                    }
+                    svg{
+                        transition: .3s ease color;
+                        margin-right: 10px;
+                    }
+                    &:after{
+                        transition: .3s ease opacity, .5s ease width;
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 0;
+                        height: 100%;
+                        background: linear-gradient(to right, rgba(255, 255, 255, 9%) 15%, rgba(255, 255, 255, 0) 100%);
+                        z-index: -1;
+                        opacity: 0;
+                    }
+                    &:hover,&.active{
+                        border-left: solid 5px var(--primary);
+                        span{
+                            color: var(--white);
+                        }
+                        svg{
+                            color: var(--primary);
+                        }
+                        &:after{
+                            opacity: 1;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

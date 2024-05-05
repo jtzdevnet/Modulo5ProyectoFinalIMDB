@@ -1,0 +1,28 @@
+footer{
+    display: flex;
+    width: 100%;
+    position: relative;
+    border-top: solid 1px lighten(#000, 15%);
+    .footer-container{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        @media(min-width: 768px){
+            flex-flow: row wrap;
+            height: 100px;
+        }
+        p{
+            margin: 15px 0;
+            @media(min-width:769px){
+                margin: 0 15px;
+            }
+            @media(min-width: 1200px){
+                margin: 0 40px;
+            }
+        }
+    }
+}

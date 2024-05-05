@@ -1,0 +1,38 @@
+.content-bar{
+    width: calc(100%);
+    padding: 30px;
+    @media(min-width:1200px){
+        width: calc(100% - 300px);
+    }
+    .pagination{
+        overflow-x: scroll;
+        justify-content: flex-start;
+        padding-bottom: 10px;
+        @media(min-width: 768px){
+            overflow-x: auto;
+            justify-content: center;
+            padding-bottom: 0;
+        }
+        &::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: rgb(31, 31, 31);
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+import axios from "axios";
+
+const URL1 = '/3/movie/';
+const URL2 = '?api_key=f6772cda1692504489beade89806b5f1&language=es-MX';
+
+const BASE_URL = "https://api.themoviedb.org"
+
+const getMovieES = async (movieId) => axios.get(`${BASE_URL}${URL1}${movieId}${URL2}`);
+
+export { getMovieES }

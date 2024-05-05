@@ -1,0 +1,40 @@
+:root {
+    --black: #0a0a0a;
+    --white: #ffffff;
+    --inactive: #9f9f9f;
+
+    --primary: #06B4E2;
+    --secondary: #84C29B;
+
+    --yellow: #FFC100;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", "Arial", sans-serif;
+    background: var(--black);
+    color: var(--white);
+}
+
+button,input,form{
+    font-family: "Nunito", "Arial", sans-serif;
+}
+
+h1,h2,h3,h4,h5,p{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+*{
+    box-sizing: border-box;
+}
