@@ -1,8 +1,17 @@
-# React + Vite
+# Proyecto Final Modulo 5
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Plataforma de búsqueda de péliculas y filtrado por calificaciones de usuarios consumiendo la API de IMDB
 
-Currently, two official plugins are available:
+###REQUERIMIENTOS FUNCIONALES
+- Ver y consultar películas
+- Mostrar detalles de la película seleccionada
+- Filtrar películas por calificaciones de usuarios.
+- PLUS: Paginar los resultados de la consulta de películas
+- Debe desplegarse la aplicación en una dirección de internet.
+###REQUERIMIENTOS NO FUNCIONALES
+- Debe utilizar colores agradables al usuario
+- El proyecto debe tener una barra de navegación y un footer con tus datos de contacto como desarrollad@r
+- Incluir mensajes de error en caso de que fallen las consultas a la API
+- El diseño de la página debe ser responsivo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Link: https://gleaming-capybara-d67f40.netlify.app/
